@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+html, body {
+    margin: 0;
+    min-height: 100vh;
+    height: auto;
+    font-size: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: hsl(225, 100%, 94%);
+    background-image: url("images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.card-summary {
+    min-height: 600px;
+    height: auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+
+    background-color: white;
+    box-shadow: 0 5px 10px 1px hsla(245, 75%, 52%, 0.2);
+}
+
+.card-summary img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.text-summary {
+    text-align: center;
+    padding: 20px;
+}
+
+.text-summary h2 {
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+}
+
+.text-summary p {
+    font-size: 1rem;
+    color: hsl(224, 23%, 55%);
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+.box-subscription {
+    position: relative;
+    display: flex;
+    background-color: hsl(225, 100%, 98%);
+    width: 80%;
+    height: 50px;
+    padding: 20px 0 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+.box-subscription img {
+    height: 40px;
+    width: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20px;
+}
+
+.change {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.change p {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: hsl(245, 75%, 52%);
+    text-decoration: underline;
+}
+
+.change p:hover {
+    color: #766cf1;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.bundle-plan-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bundle-plan-price > * {
+    margin: 0 0 0 20px;
+}
+
+.bundle-plan-price h4 {
+    display: inline;
+    font-weight: 900;
+    font-size: 1rem;
+    color: hsl(223, 47%, 23%);
+}
+
+.bundle-plan-price p {
+    color: hsl(224, 23%, 55%);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.button-proceed {
+    display: flex;
+    background-color: hsl(245, 75%, 52%);
+    width: 80%;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+
+    box-shadow: 0 15px 20px 2px hsla(245, 75%, 52%, 0.2);
+}
+
+.button-proceed:hover {
+    background-color: #766cf1;
+    cursor: pointer;
+}
+
+.button-proceed p {
+    margin: auto auto auto auto;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.cancel-order {
+    display: flex;
+}
+
+.cancel-order p {
+    color: hsl(224, 23%, 55%);
+    font-weight: 900;
+    font-size: 0.7rem;
+    margin: 20px auto 40px;
+}
+
+.cancel-order p:hover {
+    color: #3a465f;
+    cursor: pointer;
+}
+
+.attribution {
+    font-size: 11px; text-align: center;
+    margin-top: 10px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 470px) {
+
+    body {
+        background-image: url("images/pattern-background-mobile.svg");
+    }
+    
+    .card-summary {
+        width: 90%;
+        min-height: 400px;
+        min-width: 130px;
+    }
+
+    .card-summary > * {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card-summary > img {
+        width: 100%;
+    }
+
+    .cancel-order {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .bundle-plan-price h4 {
+        font-size: min(10px + 1vw, 10px + 1vh);
+    }
+
+    .bundle-plan-price p {
+        font-size: min(10px + 1vw, 10px + 1vh);
+    }
+
+    .text-summary {
+        padding: 0;
+    }
+
+    .button-proceed {
+        text-align: center;
+    }
+
+    .box-subscription img {
+        aspect-ratio: 1;
+        height: min(25px + 1vh, 25px + 1vw);
+        width: min(25px + 1vh, 25px + 1vw);
+    }
+}
+
+@media screen and (max-width: 270px) {
+
+    .box-subscription img {
+        margin-left: 0;
+    }
+
+    .box-subscription {
+        justify-content: center;
+        padding-top: 10px;
+    }
+
+    .change {
+        left: 50%;
+        transform: translateX(-50%);
+        inline-size: max-content;
+        margin-top: 10px;
+    }
+
+    .cancel-order p {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 190px) {
+    .bundle-plan-price > * {
+        margin-left: 5px;
+    }
+}
